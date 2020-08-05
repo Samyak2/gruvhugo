@@ -93,11 +93,7 @@ p a, li a{
 .intro{
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-.intro p, p{
-    text-align: justify;
-}
+ }
 .image{
     width: 200px;
     border-radius: 200px;
