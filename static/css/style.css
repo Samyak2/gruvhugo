@@ -44,11 +44,22 @@ p a, li a{
 	opacity: 0;
 	position: absolute;
 }
+.post-title{
+    margin-bottom: 5px;
+}
+.post-dets{
+    margin: 0px 0px 5px 0px;
+}
+.tags{
+    margin-top: 10px;
+}
 .tag {
     background: #E25555;
     color: white;
     padding: 5px;
     border-radius: 5px;
+    text-decoration: none;
+    margin: 0px;
 }
 .label {
 	background-color: #282828;

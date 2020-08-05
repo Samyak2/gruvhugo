@@ -1,14 +1,16 @@
 {{define "main"}}
 <section class="intro">
   {{if eq .Section "posts"}}
-    <h1>{{.Title}}</h1>
-    <h5><b>Published on: </b>{{ .PublishDate.Format "January 2, 2006" }} | <b>Reading Time:</b> {{.ReadingTime}} min
+    <h1 class="post-title">{{.Title}}</h1>
+    <p class="post-dets">Published on: {{ .PublishDate.Format "January 2, 2006" }} | Reading Time: {{.ReadingTime}} min
       <br>
-    </h5>
+    </p>
+    <span class="tags">
     {{range .Params.Tags }}
         <a class="tag" href='{{ "tags/" | absURL }}{{.}}'>{{.}}</a>
     {{end}}
-    {{ if .IsTranslated }}
+    </span>
+      {{ if .IsTranslated }}
       <p>Also available in: </p>
 	    <nav class="LangNav">
 	    {{ range .Translations }}
@@ -16,7 +18,7 @@
 	    {{ end}}
 	    </nav>
     {{ end }}
-    <hr>
+      <hr>
     {{.Content }}
   {{else}}
   <h1 class="title-center">{{.Title}}</h1>
