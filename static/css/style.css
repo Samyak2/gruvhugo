@@ -30,6 +30,16 @@ body.dark{
     text-decoration: none;
     color: #076678;
 }
+
+p a, li a{
+    border-right: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 2px solid;
+    border-style: dotted;
+    text-decoration: none;
+    color: #076678;
+}
 .checkbox {
 	opacity: 0;
 	position: absolute;
