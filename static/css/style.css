@@ -95,7 +95,7 @@ p a, li a{
     flex-direction: column;
     align-items: center;
 }
-.intro p{
+.intro p, p{
     text-align: justify;
 }
 .image{
