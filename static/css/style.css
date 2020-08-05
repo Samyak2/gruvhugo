@@ -44,7 +44,12 @@ p a, li a{
 	opacity: 0;
 	position: absolute;
 }
-
+.tag {
+    background: #E25555;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
 .label {
 	background-color: #282828;
 	border-radius: 50px;
