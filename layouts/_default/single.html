@@ -2,9 +2,9 @@
 <section class="intro">
   {{if eq .Section "posts"}}
     <h1>{{.Title}}</h1>
-    <small><b>Published on: </b>{{ .PublishDate.Format "January 2, 2006" }} | <b>Reading Time:</b> {{.ReadingTime}} min
+    <h5><b>Published on: </b>{{ .PublishDate.Format "January 2, 2006" }} | <b>Reading Time:</b> {{.ReadingTime}} min
       <br>
-    </small>
+    </h5>
     {{range .Params.Tags }}
       <span class='label' style='margin-right:5px'>
         <a style="color: white; text-decoration: none;" href='{{ "tags/" | absURL }}{{.}}'>{{.}}</a>
