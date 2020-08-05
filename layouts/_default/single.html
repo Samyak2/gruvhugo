@@ -6,9 +6,7 @@
       <br>
     </h5>
     {{range .Params.Tags }}
-      <span class='label' style='margin-right:5px'>
-        <a style="color: white; text-decoration: none;" href='{{ "tags/" | absURL }}{{.}}'>{{.}}</a>
-      </span>
+        <a class="tag" href='{{ "tags/" | absURL }}{{.}}'>{{.}}</a>
     {{end}}
     {{ if .IsTranslated }}
       <p>Also available in: </p>
