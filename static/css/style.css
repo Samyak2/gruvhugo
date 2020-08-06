@@ -134,6 +134,7 @@ blockquote{
     color: #fbf1c7;
     text-decoration: none;
     border-radius: 3px;
+    margin: 5px;
 }
 .nav a:hover{
     background: #fff;
