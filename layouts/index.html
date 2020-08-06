@@ -1,7 +1,9 @@
 {{define "main"}}
     <div class="intro" style="align-items: center">
-        <img class="image" src='{{ "img/abraham.jpg" | absURL}}' alt="my picture" />
-        <p>My name is Abraham Raji. I'm a maker. I design and build solutions to problems that fascinate me. I consider myself a minimalist who believes in sensible and intuitive design that is beautiful both on the outside as well as under the hood.</p>
+    {{if .Site.Params.main.enabled }}
+        <img class="image" src='{{ .Site.Params.main.img | absURL }}' title="Icon by freepik rom www.flaticon.com" width="200px"/>
+    {{end}}
+        <p>{{ .Site.Params.main.description }}</p>
      </div>
      <div class="nav">
          <a href='{{"posts" | absURL}}'>Blog</a>
