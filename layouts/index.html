@@ -5,10 +5,6 @@
     {{end}}
         <p>{{ .Site.Params.main.description }}</p>
      </div>
-     <div class="nav">
-         <a href='{{"posts" | absURL}}'>Blog</a>
-         <a href="{{ "about" | absURL }}">About Me</a>
-         <a href="./wip.html">Wiki</a>
-     </div>
-</div>
+     {{ partial "menu.html" . }}
+    </div>
 {{end}}
