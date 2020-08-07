@@ -1,0 +1,71 @@
+baseurl = "https://examplesite.com/"
+title = "John Doe"
+languageCode = "en-us"
+paginate = "10" # Number of posts per page
+#disqusShortname = "" # Enable comments by entering your Disqus shortname
+#googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+#-------------------------------------------------------------------------------
+# DEFAULT SETTINGS
+#-------------------------------------------------------------------------------
+
+# Default Theme
+theme= "gruvhugo"
+
+# Default Post Extension
+defaultExtension= "html"
+
+# Default metadata format for newly created frontmatter using
+# hugo new command. "toml", "yaml", or "json"
+metaDataFormat= "yaml"
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+  series   = "series"
+
+[params.main]
+  enabled = true
+  img = "images/author.jpg"
+  icon = "img/logo.png"
+  description= "Description Goes Here"
+
+ # Social icons
+  [[params.social]]
+    name = "gitlab"
+    url  = "https://gitlab.com/"
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:mail@mail.com"
+
+  [[params.social]]
+    name = "gpg"
+    url  = "https://keys.openpgp.org/"
+
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Posts"
+    url        = "posts/"
+
+  [[menu.main]]
+    identifier = "wiki"
+    name       = "Wiki"
+    url        = "none"
