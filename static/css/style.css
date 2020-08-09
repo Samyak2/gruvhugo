@@ -59,7 +59,7 @@ p a, li a{
     margin-right: 5px;
 }
 .tags h5{
-    margin: 2px 5px 0px 0px;
+    margin: 6px 5px 6px 0px;
 }
 .tag {
     background: #E25555;
@@ -69,8 +69,8 @@ p a, li a{
     text-decoration: none;
     margin: 0px;
 }
-.well h5 {
-    margin: 0;
+.well h5{
+    margin: 5px 0px;
 }
 .label {
 	background-color: #282828;
