@@ -52,6 +52,11 @@ p a, li a{
 }
 .tags{
     margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tags a {
+    margin: 5px;
 }
 .tag {
     background: #E25555;
