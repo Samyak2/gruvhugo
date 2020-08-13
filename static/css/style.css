@@ -121,6 +121,12 @@ p a, li a{
     display: flex;
     flex-direction: column;
  }
+.intro ul li{
+    font-family: serif;
+    list-style: none;
+    font-style: italic;
+    text-align: center;
+}
 .image{
     width: 200px;
     border-radius: 200px;
