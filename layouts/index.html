@@ -1,10 +1,13 @@
 {{define "main"}}
-    <div class="intro" style="align-items: center">
+<div class="intro" style="align-items: center">
     {{if .Site.Params.main.enabled }}
-        <img class="image" src='{{ .Site.Params.main.img | absURL }}' title="Icon by freepik rom www.flaticon.com" width="200px"/>
+    <img class="image" src='{{ .Site.Params.main.img | absURL }}' title="Icon by freepik rom www.flaticon.com" width="200px"/>
+    <ul>
+        <li>{{ .Site.Params.main.quote }}</li>
+    </ul>
     {{end}}
-        <p>{{ .Site.Params.main.description }}</p>
-     </div>
-     {{ partial "menu.html" . }}
-    </div>
+    <p>{{ .Site.Params.main.description }}</p>
+</div>
+{{ partial "menu.html" . }}
+</div>
 {{end}}
