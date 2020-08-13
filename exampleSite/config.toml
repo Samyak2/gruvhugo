@@ -27,6 +27,7 @@ metaDataFormat= "yaml"
   enabled = true
   img = "images/author.jpg"
   icon = "img/logo.png"
+  quote = "Mea navis aëricumbens anguillis abundant."
   description= "Description Goes Here"
 
  # Social icons
