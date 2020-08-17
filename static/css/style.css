@@ -166,6 +166,7 @@ blockquote{
 }
 blockquote {
     background: #f9f9f9;
+    color: #454545;
     border-left: 5px solid #076678; /*#ccc;*/
     margin: 1.5em 20px;
     padding: 0.5em 10px;
