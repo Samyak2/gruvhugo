@@ -121,7 +121,7 @@ p a, li a{
     display: flex;
     flex-direction: column;
  }
-.intro ul li{
+.intro-quote{
     font-family: serif;
     list-style: none;
     font-style: italic;

@@ -3,7 +3,7 @@
     {{if .Site.Params.main.enabled }}
     <img class="image" src='{{ .Site.Params.main.img | absURL }}' title="Icon by freepik rom www.flaticon.com" width="200px"/>
     <ul>
-        <li>{{ .Site.Params.main.quote }}</li>
+        <li class="intro-quote">{{ .Site.Params.main.quote }}</li>
     </ul>
     {{end}}
     <p>{{ .Site.Params.main.description }}</p>
