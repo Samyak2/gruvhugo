@@ -244,12 +244,12 @@ pre{
     padding: 10px;
     background-color: #2C2C2C;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    font: 15px "Source Code Pro", Consolas, monospace;
+    overflow-x: auto;
 }
 code{
     background: #2C2C2C;
+    color: #fbf1c7;
 }
 @media screen and (max-width: 1024px){
     .main{
