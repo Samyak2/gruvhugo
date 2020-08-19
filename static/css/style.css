@@ -242,7 +242,14 @@ blockquote ul, ul {
 }
 pre{
     padding: 10px;
+    background-color: #2C2C2C;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+code{
+    background: #2C2C2C;
 }
 @media screen and (max-width: 1024px){
     .main{
