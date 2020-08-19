@@ -240,7 +240,10 @@ blockquote ul, ul {
 #footer .copyleft li:first-child {
     border-left: 0;
 }
-
+pre{
+    padding: 10px;
+    border-radius: 5px;
+}
 @media screen and (max-width: 1024px){
     .main{
         width: 80%;
