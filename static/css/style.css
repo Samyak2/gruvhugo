@@ -54,6 +54,7 @@ p a, li a{
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
+    boder-bottom: 2px dotted;
 }
 .tags a {
     margin-right: 5px;
