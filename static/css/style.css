@@ -121,7 +121,10 @@ p a, li a{
 .intro{
     display: flex;
     flex-direction: column;
- }
+}
+.intro p{
+    text-align: justify;
+}
 .intro-quote{
     font-family: serif;
     list-style: none;
