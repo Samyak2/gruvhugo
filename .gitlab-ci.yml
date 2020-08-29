@@ -25,6 +25,7 @@ pages:
   stage: deploy
   image: registry.gitlab.com/pages/hugo:latest
   script:
+  - ls && cd test
   - hugo
   artifacts:
     paths:
