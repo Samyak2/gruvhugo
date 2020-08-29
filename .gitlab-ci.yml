@@ -1,0 +1,13 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+stages:
+  - build
+
+build-branch:
+  image: registry.gitlab.com/pages/hugo:latest
+  stage: build
+  script:
+    - hugo
+  except:
+    - master
