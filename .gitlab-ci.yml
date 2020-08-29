@@ -5,14 +5,12 @@ stages:
   - build
   - deploy
 
-before_script:
-  - apt-get update -y
-  - apt-get install -y hugo git
-
 build-branch:
   stage: build
   image: "debian:stable"
   script:
+  - apt-get update -y
+  - apt-get install -y hugo git
   - hugo new site test && cd test
   - git submodule add https://gitlab.com/avron/gruvhugo themes/gruvhugo
   - rm -rf content && cp -r themes/gruvhugo/exampleSite/content/ . 
