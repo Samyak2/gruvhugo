@@ -1,15 +1,20 @@
-image: registry.gitlab.com/pages/hugo:latest
+image: "debian:unstable"
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
-build:
+before_script:
+  - apt-get update -y
+  - apt-get install -y hugo
+
+build-branch:
+  stage: build
   script:
     - hugo new site test && cd test
     - git submodule add https://gitlab.com/avron/gruvhugo themes/gruvhugo
     - rm -rf content && cp -r themes/gruvhugo/exampleSite/content/ . 
     - rm config.toml && cp themes/gruvhugo/exampleSite/config.toml . 
-    - cd ..
+    - ls -a && cd ..
   artifacts:
     paths:
     - test
