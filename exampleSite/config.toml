@@ -1,5 +1,5 @@
 baseurl = "https://examplesite.com/"
-title = "John Doe"
+title = "Jane Doe"
 languageCode = "en-us"
 paginate = "10" # Number of posts per page
 #disqusShortname = "" # Enable comments by entering your Disqus shortname
@@ -25,10 +25,12 @@ metaDataFormat= "yaml"
 
 [params.main]
   enabled = true
-  img = "images/author.jpg"
+  name = "jane_doe"
+  img = "img/author.jpg"
+  # Thanks to Christina @ wocintechchat.com for this photo.
   icon = "img/logo.png"
-  quote = "Mea navis aëricumbens anguillis abundant."
-  description= "Description Goes Here"
+  quote = "A nice quote that you like that describes the beautiful person you are."
+  description= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. Quis risus sed vulputate odio ut. Sed turpis tincidunt id aliquet risus feugiat in ante metus. Bibendum at varius vel pharetra vel turpis. Semper viverra nam libero justo laoreet sit amet cursus. Mauris a diam maecenas sed enim ut sem."
 
  # Social icons
   [[params.social]]
