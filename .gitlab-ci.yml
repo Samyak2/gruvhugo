@@ -21,12 +21,13 @@ build-branch:
     - test
 
 pages:
-  image: alpine:latest
   stage: deploy
+  image: registry.gitlab.com/pages/hugo:latest
   script:
-  - ls
+  - hugo
   artifacts:
     paths:
-    - test
+    - public
   only:
   - master
+
