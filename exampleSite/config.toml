@@ -68,7 +68,7 @@ metaDataFormat= "yaml"
   [[menu.main]]
     identifier = "posts"
     name       = "Posts"
-    url        = "posts/"
+    url        = "post/"
 
   [[menu.main]]
     identifier = "wiki"
