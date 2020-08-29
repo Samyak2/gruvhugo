@@ -35,7 +35,7 @@ metaDataFormat= "yaml"
  # Social icons
   [[params.social]]
     name = "gitlab"
-    url  = "https://gitlab.com/"
+    url  = "https://gitlab.com/avron/gruvhugo"
 
   [[params.social]]
     name = "email"
@@ -61,7 +61,7 @@ metaDataFormat= "yaml"
   [[menu.main]]
     identifier = "about"
     name       = "About"
-    url        = "about/"
+    url        = "about"
 
   [[menu.main]]
     identifier = "posts"
