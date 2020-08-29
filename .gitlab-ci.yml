@@ -1,8 +1,9 @@
+image: registry.gitlab.com/pages/hugo:latest
+
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
 build-branch:
-  image: registry.gitlab.com/pages/hugo:latest
   script:
     - hugo new site test && cd test
     - git submodule add https://gitlab.com/avron/gruvhugo themes/gruvhugo
