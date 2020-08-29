@@ -137,6 +137,7 @@ p a, li a{
     list-style: none;
     font-style: italic;
     text-align: center;
+    width: 400px;
 }
 .image{
     width: 200px;
