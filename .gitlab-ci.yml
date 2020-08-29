@@ -16,13 +16,15 @@ build-branch:
   - rm -rf content && cp -r themes/gruvhugo/exampleSite/content/ . 
   - rm config.toml && cp themes/gruvhugo/exampleSite/config.toml . 
   - ls -a
+  artifacts:
+    paths:
+    - test
 
 pages:
   image: alpine:latest
   stage: deploy
   script:
-  - hugo
-  - cd ..
+  - ls
   artifacts:
     paths:
     - test
