@@ -229,6 +229,9 @@ blockquote ul, ul {
     margin: 20px auto;
     width: 80%;
 }
+#footer p{
+    width: 500px;
+}
 .copyleft b {
     display: inline-block;
     transform: rotate(180deg);
