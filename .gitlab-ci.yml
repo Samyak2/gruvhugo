@@ -27,6 +27,7 @@ pages:
   script:
   - ls && cd test
   - hugo
+  - ls public
   artifacts:
     paths:
     - public
