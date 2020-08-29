@@ -13,6 +13,7 @@ before_script:
   - ls -a
 
 serve:
+  image: alpine:latest
   stage: deploy
   script:
   - hugo
