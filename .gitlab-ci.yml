@@ -21,11 +21,12 @@ build-branch:
   except:
     - master
 
-pages:
+serve:
+  stage: deploy
   script:
-  - hugo
+  - echo 'Nothing to do...'
   artifacts:
     paths:
-    - public
+    - test
   only:
   - master
