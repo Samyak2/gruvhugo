@@ -27,6 +27,7 @@ pages:
     - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
     - rm config.toml && cp themes/gruvhugo/exampleSite/config.toml . 
     - hugo
+    - ls
   artifacts:
     paths:
       - public
