@@ -23,7 +23,8 @@ debian-test:
     - cp -r ../static themes/gruvhugo
     - cp ../theme.toml themes/gruvhugo
     - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
-    - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml 
+    - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml
+    - mkdir static/img && cp themes/gruvhugo/static/img/logo.png static/img
     - hugo
     - echo "Build on Debian Stable successfull!"
 
@@ -44,7 +45,8 @@ fedora-test:
     - cp -r ../static themes/gruvhugo
     - cp ../theme.toml themes/gruvhugo
     - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
-    - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml 
+    - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml
+    - mkdir static/img && cp themes/gruvhugo/static/img/logo.png static/img 
     - hugo
     - echo "Build on Fedora Latest successfull!"
 
@@ -66,6 +68,7 @@ archlinux-test:
     - cp ../theme.toml themes/gruvhugo
     - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
     - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml 
+    - mkdir static/img && cp themes/gruvhugo/static/img/logo.png static/img    
     - hugo
     - echo "Build on Archlinux Latest successfull!"
 
@@ -92,6 +95,7 @@ pages:
     - cp ../theme.toml themes/gruvhugo
     - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
     - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml 
+    - mkdir static/img && cp themes/gruvhugo/static/img/logo.png static/img
     - hugo
     - mv public ../
   artifacts:
@@ -99,4 +103,3 @@ pages:
       - public
   only:
     - master
-
