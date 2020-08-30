@@ -25,7 +25,7 @@ pages:
     - cp -r ../static themes/gruvhugo
     - cp ../theme.toml themes/gruvhugo
     - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
-    - rm config.toml && cp themes/gruvhugo/exampleSite/config.toml . 
+    - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml . 
     - hugo
     - mv public ../
   artifacts:
