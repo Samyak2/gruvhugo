@@ -24,7 +24,7 @@ debian-test:
     - cp ../theme.toml themes/gruvhugo
     - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
     - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml
-    - mkdir static/img && cp themes/gruvhugo/static/img/logo.png static/img
+    - mkdir static/img && cp themes/gruvhugo/static/img/logo.png static/img/
     - hugo
     - echo "Build on Debian Stable successfull!"
 
