@@ -16,11 +16,7 @@ debian-test:
   before_script:
     - apt-get update -y
     - apt-get install -y git hugo
-  stages:
-    - build
-  build-branch:
-    stage: build
-    script:
+  script:
     - hugo new site test && cd test
     - mkdir themes/gruvhugo 
     - cp -r ../archetypes themes/gruvhugo
