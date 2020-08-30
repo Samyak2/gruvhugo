@@ -4,18 +4,19 @@
 # https://gitlab.com/pages/hugo/container_registry
 include: 'https://gitlab.com/avron/avron.gitlab.io/-/raw/master/debian-test.yml'
 
-image: registry.gitlab.com/pages/hugo:latest
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
 test:
+  image: registry.gitlab.com/pages/hugo:latest
   script:
     - hugo
   except:
     - master
 
 pages:
+  image: registry.gitlab.com/pages/hugo:latest
   script:
     - hugo new site test && cd test
     - mkdir themes/gruvhugo 
