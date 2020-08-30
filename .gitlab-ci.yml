@@ -1,19 +1,17 @@
-# This file is a template, and might need editing before it works on your project.
----
-# All available Hugo versions are listed here:
-# https://gitlab.com/pages/hugo/container_registry
-image: registry.gitlab.com/pages/hugo:latest
-
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
-test:
-  script:
-    - hugo
-  except:
-    - master
+stages:
+  - build
+  - test
+  - pages
 
-pages:
+debian-test:
+  stage: build
+  image: "debian:stable"
+  before_script:
+    - apt-get update -y
+    - apt-get install -y git hugo
   script:
     - hugo new site test && cd test
     - mkdir themes/gruvhugo 
@@ -25,7 +23,75 @@ pages:
     - cp -r ../static themes/gruvhugo
     - cp ../theme.toml themes/gruvhugo
     - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
-    - rm config.toml && cp themes/gruvhugo/exampleSite/config.toml . 
+    - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml 
+    - hugo
+    - echo "Build on Debian Stable successfull!"
+
+fedora-test:
+  stage: build
+  image: "fedora:latest"
+  before_script:
+    - dnf update -y
+    - dnf install -y git hugo
+  script:
+    - hugo new site test && cd test
+    - mkdir themes/gruvhugo 
+    - cp -r ../archetypes themes/gruvhugo
+    - cp -r ../exampleSite themes/gruvhugo 
+    - cp -r ../layouts themes/gruvhugo
+    - cp ../LICENSE themes/gruvhugo
+    - cp ../README.md themes/gruvhugo
+    - cp -r ../static themes/gruvhugo
+    - cp ../theme.toml themes/gruvhugo
+    - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
+    - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml 
+    - hugo
+    - echo "Build on Fedora Latest successfull!"
+
+archlinux-test:
+  stage: build
+  image: "archlinux:latest"
+  before_script:
+    - pacman -Syu --noconfirm 
+    - pacman -S --noconfirm git hugo
+  script:
+    - hugo new site test && cd test
+    - mkdir themes/gruvhugo 
+    - cp -r ../archetypes themes/gruvhugo
+    - cp -r ../exampleSite themes/gruvhugo 
+    - cp -r ../layouts themes/gruvhugo
+    - cp ../LICENSE themes/gruvhugo
+    - cp ../README.md themes/gruvhugo
+    - cp -r ../static themes/gruvhugo
+    - cp ../theme.toml themes/gruvhugo
+    - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
+    - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml 
+    - hugo
+    - echo "Build on Archlinux Latest successfull!"
+
+test:
+  stage: test
+  image: registry.gitlab.com/pages/hugo:latest
+  script:
+    - hugo
+  except:
+    - master
+
+pages:
+  stage: pages
+  image: registry.gitlab.com/pages/hugo:latest
+  script:
+    - hugo new site test && cd test
+    - mkdir themes/gruvhugo 
+    - cp -r ../archetypes themes/gruvhugo
+    - cp -r ../exampleSite themes/gruvhugo 
+    - cp -r ../layouts themes/gruvhugo
+    - cp ../LICENSE themes/gruvhugo
+    - cp ../README.md themes/gruvhugo
+    - cp -r ../static themes/gruvhugo
+    - cp ../theme.toml themes/gruvhugo
+    - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
+    - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml 
     - hugo
     - mv public ../
   artifacts:
@@ -33,3 +99,4 @@ pages:
       - public
   only:
     - master
+
