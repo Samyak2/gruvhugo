@@ -52,8 +52,8 @@ archlinux-test:
   stage: build
   image: "archlinux:latest"
   before_script:
-    - pacman -Syu
-    - pacman -Syu git hugo
+    - pacman -Syu —noconfirm
+    - pacman -Syu —noconfirm git hugo
   script:
     - hugo new site test && cd test
     - mkdir themes/gruvhugo 
