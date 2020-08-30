@@ -53,7 +53,7 @@ archlinux-test:
   image: "archlinux:latest"
   before_script:
     - pacman -Syu
-    - pacman -Sy git hugo
+    - pacman -Syu git hugo
   script:
     - hugo new site test && cd test
     - mkdir themes/gruvhugo 
