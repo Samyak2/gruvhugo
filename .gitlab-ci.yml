@@ -2,9 +2,6 @@
 ---
 # All available Hugo versions are listed here:
 # https://gitlab.com/pages/hugo/container_registry
-include: 'https://gitlab.com/avron/avron.gitlab.io/-/raw/master/debian-test.yml'
-
-
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
