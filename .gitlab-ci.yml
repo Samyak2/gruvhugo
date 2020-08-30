@@ -65,3 +65,4 @@ pages:
       - public
   only:
     - master
+
