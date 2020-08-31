@@ -105,3 +105,6 @@ metaDataFormat= "yaml"
 
 ## Contributing
 Issues and merge requests for bug fixes and enhancements are welcome.
+
+## Licence
+The theme is released under the GPL v3 License.
