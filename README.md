@@ -18,3 +18,5 @@ Adding theme as a sub-module is by the most efficient way to do things in my opi
 ``` sh
 $ git submodule add https://gitlab.com/avron/gruvhugo.git
 ```
+## Contributing
+Issues and merge requests for bug fixes and enhancements are welcome.
