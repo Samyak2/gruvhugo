@@ -1,6 +1,6 @@
 # Gruvhugo
 This is a minmal theme based on the [Gruvbox](https://github.com/morhetz/gruvbox) color scheme by [Pavel Pertsev](https://github.com/morhetz/)
-![Main page screenshot](https://gitlab.com/avron/gruvhugo/-/blob/master/screenshot.png)
+![Main page screenshot](https://gitlab.com/avron/gruvhugo/-/blob/master/screenshot.png "Light Theme Screenshot")
 # Feature
 - **Minimalism is the norm here** 
 - Highly customizable
