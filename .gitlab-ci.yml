@@ -126,6 +126,7 @@ test:
   image: registry.gitlab.com/pages/hugo:latest
   script:
     - hugo
+    - echo "Test Successfull for Hugo Latest"
   except:
     - master
 
