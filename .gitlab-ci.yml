@@ -54,7 +54,7 @@ debian-testing-test:
 
 ubuntu-test:
   stage: build
-  image: "ubuntu:rolling"
+  image: "ubuntu:latest"
   before_script:
     - apt-get update -y
     - apt-get install -y git hugo neofetch
