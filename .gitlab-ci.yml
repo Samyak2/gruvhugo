@@ -52,29 +52,6 @@ debian-testing-test:
     - hugo
     - echo "Build on Debian Testing successfull!"
 
-ubuntu-test:
-  stage: build
-  image: "ubuntu:latest"
-  before_script:
-    - apt-get update -y
-    - apt-get install -y git hugo neofetch
-  script:
-    - neofetch
-    - hugo new site test && cd test
-    - mkdir themes/gruvhugo 
-    - cp -r ../archetypes themes/gruvhugo
-    - cp -r ../exampleSite themes/gruvhugo 
-    - cp -r ../layouts themes/gruvhugo
-    - cp ../LICENSE themes/gruvhugo
-    - cp ../README.md themes/gruvhugo
-    - cp -r ../static themes/gruvhugo
-    - cp ../theme.toml themes/gruvhugo
-    - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
-    - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml
-    - mkdir static/img && cp themes/gruvhugo/static/img/logo.png static/img/
-    - hugo
-    - echo "Build on Ubuntu successfull!"
-
 fedora-test:
   stage: build
   image: "fedora:latest"
