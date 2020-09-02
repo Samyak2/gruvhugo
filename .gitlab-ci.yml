@@ -75,6 +75,29 @@ fedora-test:
     - hugo
     - echo "Build on Fedora Latest successfull!"
 
+fedora-rawhide-test:
+  stage: build
+  image: "fedora:rawhide"
+  before_script:
+    - dnf update -y
+    - dnf install -y git hugo neofetch
+  script:
+    - neofetch
+    - hugo new site test && cd test
+    - mkdir themes/gruvhugo 
+    - cp -r ../archetypes themes/gruvhugo
+    - cp -r ../exampleSite themes/gruvhugo 
+    - cp -r ../layouts themes/gruvhugo
+    - cp ../LICENSE themes/gruvhugo
+    - cp ../README.md themes/gruvhugo
+    - cp -r ../static themes/gruvhugo
+    - cp ../theme.toml themes/gruvhugo
+    - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
+    - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml
+    - mkdir static/img && cp themes/gruvhugo/static/img/logo.png static/img 
+    - hugo
+    - echo "Build on Fedora Latest successfull!"
+
 archlinux-test:
   stage: build
   image: "archlinux:latest"
