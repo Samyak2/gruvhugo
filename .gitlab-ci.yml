@@ -96,7 +96,7 @@ fedora-rawhide-test:
     - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml
     - mkdir static/img && cp themes/gruvhugo/static/img/logo.png static/img 
     - hugo
-    - echo "Build on Fedora Latest successfull!"
+    - echo "Build on Fedora Rawhide successfull!"
 
 archlinux-test:
   stage: build
