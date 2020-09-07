@@ -231,12 +231,15 @@ blockquote ul, ul {
 }
 #footer p{
     width: 500px;
+    margin: 10px auto;
 }
 .copyleft b {
     display: inline-block;
     transform: rotate(180deg);
 }
-
+#footer strong{
+    width: 90%;
+}
 #footer .copyleft {
     margin: 10px 0px;
     padding: 0;
@@ -270,5 +273,8 @@ code{
 @media screen and (max-width: 1024px){
     .main{
         width: 80%;
+    }
+    #footer p, .intro-quote{
+        width: 90%;
     }
 }
