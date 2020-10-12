@@ -10,7 +10,7 @@
         {{else}}
           {{ range .Pages}}
             <div>
-              {{if eq .Section "posts"}}
+              {{if eq .Section "post"}}
                 <well class="well">
                     <h3><a class="link" href="{{.Permalink}}">{{.Title}}</a></h3>
                     <h5>{{ .PublishDate.Format "January 2, 2006" }}</h5>
