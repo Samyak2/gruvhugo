@@ -125,7 +125,7 @@ test:
   stage: test
   image: registry.gitlab.com/pages/hugo:latest
   script:
-        - hugo new site test && cd test
+    - hugo new site test && cd test
     - mkdir themes/gruvhugo 
     - cp -r ../archetypes themes/gruvhugo
     - cp -r ../exampleSite themes/gruvhugo 
