@@ -125,6 +125,18 @@ test:
   stage: test
   image: registry.gitlab.com/pages/hugo:latest
   script:
+        - hugo new site test && cd test
+    - mkdir themes/gruvhugo 
+    - cp -r ../archetypes themes/gruvhugo
+    - cp -r ../exampleSite themes/gruvhugo 
+    - cp -r ../layouts themes/gruvhugo
+    - cp ../LICENSE themes/gruvhugo
+    - cp ../README.md themes/gruvhugo
+    - cp -r ../static themes/gruvhugo
+    - cp ../theme.toml themes/gruvhugo
+    - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
+    - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml 
+    - mkdir static/img && cp themes/gruvhugo/static/img/logo.png static/img
     - hugo
     - echo "Test Successfull for Hugo Latest"
   except:
