@@ -1,14 +1,10 @@
 <footer id="footer">
-            <strong>
-                 {{- with .Site.Params.social }}
-                <div class="social">
-                    {{ partial "social.html" . }}
-                </div>
-                {{- end }}
-                <p>Made with <span style="color: #e25555;">&#9829;</span>, All original content is licensed under a free/libre copyleft license (GPL or CC BY-SA).</p>
-            <ul class="copyleft">
-                <li><a class="link" href="LICENSE"><b>&copy</b> COPYLEFT</a></li>
-                <li>{{ .Site.Params.main.name }}</li>
-            </ul>
-            </strong>
-         </footer>
+    <strong>{{- with .Site.Params.social }}</strong>
+    <div class="social">
+        <strong>{{ partial "social.html" . }}</strong>
+    </div><strong>{{- end }}</strong>
+    <p><strong>Made with <span style="color: #e25555;">♥</span>,
+    All original content is licensed under a free/libre <a class=
+    "link" href="LICENSE">copyleft</a> license (GPL or CC
+    BY-SA).</strong></p>
+</footer>
