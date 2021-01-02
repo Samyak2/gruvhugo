@@ -2,20 +2,16 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name = "Gruvhugo"
-license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
-tags = []
+license = "GPL-3.0"
+licenselink = "https://gitlab.com/avron/gruvhugo/-/blob/master/LICENSE"
+description = "A minmal theme based on the Gruvbox color scheme."
+homepage = "https://avron.gitlab.io/gruvhugo/"
+tags = ["minimal", "gruvbox", "responsive"]
 features = []
+tags = ["landing page", "gruvbox", "blog", "mobile", "light", "minimal", "modern", "customizable", "dark mode"]
+features = [fast by default", "dark mode", "Responsive", "Clean", "Simple"]
 min_version = "0.41"
 
 [author]
-  name = ""
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Abraham Raji"
+  homepage = "abrahamraji.in"
