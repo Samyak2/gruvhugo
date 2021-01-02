@@ -9,7 +9,7 @@ homepage = "https://avron.gitlab.io/gruvhugo/"
 tags = ["minimal", "gruvbox", "responsive"]
 features = []
 tags = ["landing page", "gruvbox", "blog", "mobile", "light", "minimal", "modern", "customizable", "dark mode"]
-features = [fast by default", "dark mode", "Responsive", "Clean", "Simple"]
+features = ["fast", "dark mode", "Responsive", "Clean", "Simple"]
 min_version = "0.41"
 
 [author]

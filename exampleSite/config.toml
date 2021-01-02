@@ -27,6 +27,8 @@ metaDataFormat= "yaml"
 
 [params.main]
   enabled = true
+  enableKatex = true
+  metaKeywords = "fast, hugo, theme, minimal, gruvbox"
   name = "jane_doe"
   img = "img/author.jpg"
   # Thanks to Christina @ wocintechchat.com for this photo.
