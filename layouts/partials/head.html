@@ -7,6 +7,9 @@
     {{else}}
         <title>{{.Title}} | {{.Site.Title}}</title>
         <meta name="description" content="{{.Title}}">
+        <meta property="og:site_name" content="{{ .Site.Title }}" />
+        <meta property="og:title" content="{{ .Title }}" />
+        <meta property="og:image" content="{{ .Site.Params.main.img | absURL }}" />
     {{end}}
     <meta name="keywords" content="Abraham, Raji, Abraham Raji, avron, avronr, SJCET, Debian">
     <link rel="icon" type="image/svg" href='{{ .Site.Params.main.icon | absURL }}'/>
