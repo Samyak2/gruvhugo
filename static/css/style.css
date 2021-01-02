@@ -212,6 +212,7 @@ ul {
   flex-wrap: wrap;
   margin: 20px 0px 0px 0px;
   justify-content: space-between;
+  width: 80%;
 }
 .social a {
   text-decoration: none;
