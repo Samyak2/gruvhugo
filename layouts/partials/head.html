@@ -3,13 +3,14 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     {{ if .IsHome}}
         <title>{{.Site.Title}}</title>
-        <meta name="description" content="{{ .Param "description" }}">
+        <meta name="description" content="{{ .Site.Params.main.description  }}" >
+        <meta property="og:description" content="{{ .Site.Params.main.description }}"/>
     {{else}}
         <title>{{.Title}} | {{.Site.Title}}</title>
         <meta name="description" content="{{.Title}}">
         <meta property="og:site_name" content="{{ .Site.Title }}" />
-        <meta property="og:description" content="{{ .Param "description" }}" />
         <meta property="og:title" content="{{ .Title }}" />
+        <meta property="og:description" content="{{ .Site.Params.main.description }}"/>
         <meta property="og:image" content="{{ .Site.Params.main.img | absURL }}" />
     {{end}}
     <meta name="keywords" content="Abraham, Raji, Abraham Raji, avron, avronr, SJCET, Debian">
