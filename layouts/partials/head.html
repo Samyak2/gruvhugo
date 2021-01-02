@@ -8,8 +8,8 @@
     {{else}}
         <title>{{.Title}} | {{.Site.Title}}</title>
         <meta name="description" content="{{.Title}}">
-        <meta property="og:site_name" content="{{ .Site.Title }}" />
-        <meta property="og:title" content="{{ .Title }}" />
+        <meta property="og:site_name" content="{{ .Title }}" />
+        <meta property="og:title" content="{{ .Site.Title }}" />
         <meta property="og:description" content="{{ .Site.Params.main.description }}"/>
         <meta property="og:image" content="{{ .Site.Params.main.img | absURL }}" />
     {{end}}
