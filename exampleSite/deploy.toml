@@ -27,6 +27,7 @@ metaDataFormat= "yaml"
 
 [params.main]
   enabled = true
+  enableKatex = true
   name = "jane_doe"
   img = "img/author.jpg"
   # Thanks to Christina @ wocintechchat.com for this photo.
