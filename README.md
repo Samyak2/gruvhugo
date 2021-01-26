@@ -9,6 +9,7 @@ This is a minmal theme based on the [Gruvbox](https://github.com/morhetz/gruvbox
 
 # Feature
 - **Minimalism is the norm here** 
+- **Fast.**
 - Highly customizable
   - Almost every piece of text you see is customizable.
   - Customizable Pictures
