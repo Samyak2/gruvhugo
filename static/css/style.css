@@ -1,5 +1,5 @@
 /* Fonts */
-@import url("https://smc.org.in/fonts/manjari.css");
+@import url('{{"css/manjari.css" | absURL }}');
 @import url("https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css");
 
 /* Styling */
