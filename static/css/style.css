@@ -1,6 +1,6 @@
 /* Fonts */
 @import url("./manjari.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/firacode/5.2.0/fira_code.css");
+@import url("./fira_code.css");
 
 /* Styling */
 html {
@@ -8,7 +8,7 @@ html {
 }
 body {
   color: #454545;
-  font-size: calc(1em + 0.33vw);
+  font-size: calc(1em + 0.22vw);
   transition: background 0.2s linear;
   box-sizing: border-box;
   line-height: 1.4;
