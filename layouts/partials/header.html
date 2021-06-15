@@ -1,21 +1,42 @@
 <div class="title">
-    <div class="name">
-        <h2><a href="{{.Site.BaseURL}}" style="text-decoration: none; color: inherit;">{{ .Site.Title }}</a></h2>
-    </div>
-    <div class="color-scheme">
-        <input type="checkbox" class="checkbox" id="chk" />
-        <label class="label" for="chk">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <div class="ball"></div>
-        </label>
-     </div>
+  <div class="name">
+    <h2><a href="{{.Site.BaseURL}}" style="text-decoration: none; color: inherit;">{{ .Site.Title }}</a></h2>
+  </div>
+  <div class="color-scheme">
+    <input type="checkbox" class="checkbox" id="chk" />
+    <label class="label" for="chk">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+      <div class="ball"></div>
+    </label>
+  </div>
 </div>
 <script>
- const chk = document.getElementById('chk');
+  let setTheme = localStorage.getItem('theme')
 
-chk.addEventListener('change', () => {
-	document.body.classList.toggle('dark');
-});
+  if (setTheme == null)
+      {localStorage.setItem('theme', 'dark')}
+  else if (setTheme === 'dark')
+      {localStorage.setItem('theme', 'dark')}
+  else {
+      document.body.classList.toggle('light');
+      localStorage.setItem('theme', 'light')
+  }
+
+  const swapStyle = () => {
+      if (localStorage.getItem('theme') === 'dark'){
+	  document.body.classList.add('back-transition');
+	  document.body.classList.toggle('light');
+	  localStorage.setItem('theme', 'light')
+      }
+      else {
+	  document.body.classList.add('back-transition')
+	  document.body.classList.toggle('light');
+	  localStorage.setItem('theme', 'dark')
+      }
+  }
+  
+  document.getElementById('chk')
+    .addEventListener('change',swapStyle);
 </script>
 
