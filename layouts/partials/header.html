@@ -20,23 +20,30 @@
       {localStorage.setItem('theme', 'dark')}
   else {
       document.body.classList.toggle('light');
+      document.addEventListener("DOMContentLoaded", () => {
+	    [...document.getElementsByTagName("BLOCKQUOTE")]
+	  .forEach(b => b.classList.toggle('light'))
+      });
       localStorage.setItem('theme', 'light')
   }
 
   const swapStyle = () => {
       if (localStorage.getItem('theme') === 'dark'){
 	  document.body.classList.add('back-transition');
+	  [...document.getElementsByTagName("BLOCKQUOTE")]
+	      .forEach(b => b.classList.toggle('light'))
 	  document.body.classList.toggle('light');
 	  localStorage.setItem('theme', 'light')
       }
-      else {
-	  document.body.classList.add('back-transition')
+      else if (localStorage.getItem('theme') === 'light'){
+	  document.body.classList.add('back-transition');
+	  [...document.getElementsByTagName("BLOCKQUOTE")]
+	      .forEach(b => b.classList.toggle('light'))
 	  document.body.classList.toggle('light');
-	  localStorage.setItem('theme', 'dark')
+	  localStorage.setItem('theme', 'dark');
       }
   }
-  
+
   document.getElementById('chk')
     .addEventListener('change',swapStyle);
 </script>
-
