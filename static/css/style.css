@@ -3,6 +3,8 @@ html {
     font-family: sans-serif;
 }
 body {
+    margin: 0;
+    padding: 0;
     background: #1d2021;
     color: #fbf1c7;
     font-size: calc(1em + 0.22vw);
@@ -35,7 +37,16 @@ body.light {
     text-decoration: none;
     color: #076678;
 }
-
+.line {
+    margin: 0;
+    background: #076678;
+    height: 5px;
+    border-radius: 4px;
+    width: 0%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
 p a,
 li a {
     border-right: 0px;

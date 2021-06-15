@@ -2,7 +2,8 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
-        <div class="main">
+      <div class="line" id="scrollIndicator"></div>
+      <div class="main">
         {{- partial "header.html" . -}}        
 	{{- block "main" . }}{{- end }}
         </div>
