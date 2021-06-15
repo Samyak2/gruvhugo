@@ -1,7 +1,7 @@
 {{define "main"}}
 <br>
-    <h2><a class="go-back" href=".."><i class="far fa-caret-square-left"></i> Go Back</a></h2>
-    <h1 class="post-title">{{.Title}}</h1>
+    <h2 class="post-title"><a class="go-back" href="{{ "/" | absLangURL}}">
+	<i class="far fa-caret-square-left"></i> </a>{{.Title}}</h2>
         <!-- List all tags -->
         {{if eq .Kind "taxonomyTerm"}}
           {{range $key, $value := .Data.Terms.Alphabetical}}

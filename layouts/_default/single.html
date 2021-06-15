@@ -1,8 +1,8 @@
 {{define "main"}}
 <section class="intro">
-    <h2><a class="go-back" href=".."><i class="far fa-caret-square-left"></i> Go Back</a></h2>
   {{if eq .Section "post"}}
-    <h1 class="post-title">{{.Title}}</h1>
+    <h1 class="post-title"><a class="go-back" href="{{ "post/" | absLangURL}}">
+	<i class="far fa-caret-square-left"></i></a> {{.Title}}</h1>
     <p class="post-dets">Published on: {{ .PublishDate.Format "January 2, 2006" }} | Reading Time: {{.ReadingTime}} min
       <br>
     </p>
