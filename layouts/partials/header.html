@@ -1,58 +1,48 @@
 <div class="title">
   <div class="name">
-    <h2><a href="{{.Site.BaseURL}}" style="text-decoration: none; color: inherit;">{{ .Site.Title }}</a></h2>
+    <h2><a href="{{.Site.BaseURL}}"
+      style="text-decoration: none; color: inherit;">{{ .Site.Title }}</a></h2>
   </div>
   <div class="color-scheme">
     <input type="checkbox" class="checkbox" id="chk" />
-    <label class="label" for="chk">
-      <i class="fas fa-moon"></i>
-      <i class="fas fa-sun"></i>
-      <div class="ball"></div>
-    </label>
+      <label class="label" for="chk">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <div class="ball"></div>
+      </label>
   </div>
 </div>
 <script>
-  let setTheme = localStorage.getItem('theme')
-
-  if (setTheme == null)
-  {localStorage.setItem('theme', 'dark')}
-  else if (setTheme === 'dark')
-  {localStorage.setItem('theme', 'dark')}
-  else {
-      document.body.classList.toggle('light');
-      document.addEventListener("DOMContentLoaded", () => {
-	  [...document.getElementsByTagName("BLOCKQUOTE")]
-	      .forEach(b => b.classList.toggle('light'))
-      });
-      localStorage.setItem('theme', 'light')
+  const themeSwitcher = (theme) => {
+    document.body.classList.toggle('light')
+    localStorage.setItem('theme', theme)
+    blockSwitcher()
   }
+
+  const blockSwitcher = () => [...document.getElementsByTagName("BLOCKQUOTE")]
+                            .forEach(b => b.classList.toggle('light'))
 
   const swapStyle = () => {
-      if (localStorage.getItem('theme') === 'dark'){
-	  document.body.classList.add('back-transition');
-	  [...document.getElementsByTagName("BLOCKQUOTE")]
-	      .forEach(b => b.classList.toggle('light'))
-	  document.body.classList.toggle('light');
-	  localStorage.setItem('theme', 'light')
-      }
-      else if (localStorage.getItem('theme') === 'light'){
-	  document.body.classList.add('back-transition');
-	  [...document.getElementsByTagName("BLOCKQUOTE")]
-	      .forEach(b => b.classList.toggle('light'))
-	  document.body.classList.toggle('light');
-	  localStorage.setItem('theme', 'dark');
-      }
+    document.body.classList.add('back-transition')
+    if (localStorage.getItem('theme') === 'dark') themeSwitcher('light')
+    else if (localStorage.getItem('theme') === 'light') themeSwitcher('dark')
   }
-  document.getElementById('chk')
-    .addEventListener('change',swapStyle);
+
+  if (localStorage.getItem('theme') === 'light'){
+    themeSwitcher('light')
+    document.addEventListener("DOMContentLoaded", blockSwitcher)
+  }
+  
+  document.getElementById('chk').addEventListener('change',swapStyle);
 
   window.addEventListener("scroll", () => {
-      let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      if(height >= 500){
-	  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-	  let scrolled = (winScroll / height) * 100;
-	  document.getElementById("scrollIndicator").
-	      style.width = scrolled + "%";
-      }
+    let height = document.documentElement.scrollHeight
+                  - document.documentElement.clientHeight;
+    if(height >= 500){
+	    let winScroll = document.body.scrollTop
+                      || document.documentElement.scrollTop;
+	    let scrolled = (winScroll / height) * 100;
+	    document.getElementById("scrollIndicator").style.width = scrolled + "%";
+    }
   });
 </script>
