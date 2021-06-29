@@ -28,7 +28,7 @@ body.light {
     text-align: left;
     width: 80%;
 }
-.link {
+.link, sup a {
     border-right: 0px;
     border-top: 0px;
     border-left: 0px;
@@ -302,4 +302,15 @@ code {
 }
 .back-transition{
     transition: background 0.2s linear;
+}
+.footnote-definition {
+    display: flex;
+    padding: 5px 0px;
+ }
+.footnote-body, .footnote-body p{
+    margin: 0;
+    padding: 0 10px;
+}
+ul li p {
+    margin: 5px;
 }
