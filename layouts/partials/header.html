@@ -1,48 +1,48 @@
 <div class="title">
   <div class="name">
     <h2><a href="{{.Site.BaseURL}}"
-      style="text-decoration: none; color: inherit;">{{ .Site.Title }}</a></h2>
+	   style="text-decoration: none; color: inherit;">{{ .Site.Title }}</a></h2>
   </div>
   <div class="color-scheme">
     <input type="checkbox" class="checkbox" id="chk" />
-      <label class="label" for="chk">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-        <div class="ball"></div>
-      </label>
+    <label class="label" for="chk">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+      <div class="ball"></div>
+    </label>
   </div>
 </div>
 <script>
-  const themeSwitcher = (theme) => {
-    document.body.classList.toggle('light')
-    localStorage.setItem('theme', theme)
-    blockSwitcher()
+  const themeSetter = (theme) => {
+      document.body.classList.toggle('light')
+      localStorage.setItem('theme', theme)
+      blockSwitcher()
   }
 
   const blockSwitcher = () => [...document.getElementsByTagName("BLOCKQUOTE")]
-                            .forEach(b => b.classList.toggle('light'))
+	.forEach(b => b.classList.toggle('light'))
 
-  const swapStyle = () => {
-    document.body.classList.add('back-transition')
-    if (localStorage.getItem('theme') === 'dark') themeSwitcher('light')
-    else if (localStorage.getItem('theme') === 'light') themeSwitcher('dark')
+  const styleSwapper = () => {
+      document.body.classList.add('back-transition')
+      if (localStorage.getItem('theme') === 'dark') themeSetter('light')
+      else if (localStorage.getItem('theme') === 'light') themeSetter('dark')
   }
 
   if (localStorage.getItem('theme') === 'light'){
-    themeSwitcher('light')
-    document.addEventListener("DOMContentLoaded", blockSwitcher)
+      themeSetter('light')
+      document.addEventListener("DOMContentLoaded", blockSwitcher)
   }
-  
-  document.getElementById('chk').addEventListener('change',swapStyle);
+
+  document.getElementById('chk').addEventListener('change',styleSwapper);
 
   window.addEventListener("scroll", () => {
-    let height = document.documentElement.scrollHeight
-                  - document.documentElement.clientHeight;
-    if(height >= 500){
-	    let winScroll = document.body.scrollTop
-                      || document.documentElement.scrollTop;
-	    let scrolled = (winScroll / height) * 100;
-	    document.getElementById("scrollIndicator").style.width = scrolled + "%";
-    }
+      let height = document.documentElement.scrollHeight
+          - document.documentElement.clientHeight;
+      if(height >= 500){
+	  let winScroll = document.body.scrollTop
+              || document.documentElement.scrollTop;
+	  let scrolled = (winScroll / height) * 100;
+	  document.getElementById("scrollIndicator").style.width = scrolled + "%";
+      }
   });
 </script>
