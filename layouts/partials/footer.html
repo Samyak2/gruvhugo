@@ -3,7 +3,5 @@
     <div class="social">
         {{ partial "social.html" . }}
     </div><strong>{{- end }}</strong>
-    <p>Made with <span style="color: #e25555;">♥</span>,
-    All original content is licensed under a free/libre <a class=
-    "link" href='{{ .Site.Params.main.licenseUrl }}'>copyleft</a> license.</p>
+    <p style="color:grey;">{{ .Site.Params.main.copyright | safeHTML }}</p>
 </footer>
