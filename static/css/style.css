@@ -11,12 +11,15 @@ body {
     box-sizing: border-box;
     line-height: 1.4;
 }
-
 body.light {
     background: white;
     color: #454545;
 }
-
+.verbatim{
+    font-family: monospace;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
 .title {
     display: flex;
     align-items: center;
