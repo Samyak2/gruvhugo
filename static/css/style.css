@@ -253,6 +253,7 @@ blockquote.light{
     border-left: 0px;
     border-bottom: 0px;
     margin: 20px auto;
+    width: 100%;
 }
 #footer p {
     width: 90%;
