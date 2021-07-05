@@ -311,6 +311,9 @@ code {
     display: flex;
     padding: 5px 0px;
  }
+.social{
+    width: 100%;
+}
 .footnote-body, .footnote-body p{
     margin: 0;
     padding: 0 10px;
