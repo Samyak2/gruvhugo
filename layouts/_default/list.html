@@ -1,6 +1,6 @@
 {{define "main"}}
 <br>
-    <h2 class="post-title"><a class="go-back" href="{{ "/" | absLangURL}}">
+    <h2 class="post-title"><a class="go-back" href="{{ .Site.BaseURL }}">
 	<i class="far fa-caret-square-left"></i> </a>{{.Title}}</h2>
         <!-- List all tags -->
         {{if eq .Kind "taxonomyTerm"}}
