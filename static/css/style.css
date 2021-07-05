@@ -1,6 +1,9 @@
 /* Styling */
+@import url('http://fonts.cdnfonts.com/css/quicksand');
+
 html {
-    font-family: sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
 }
 body {
     margin: 0;
@@ -249,9 +252,7 @@ blockquote.light{
     border-top: 2px solid;
     border-left: 0px;
     border-bottom: 0px;
-    border-style: dotted;
     margin: 20px auto;
-    width: 80%;
 }
 #footer p {
     width: 90%;
