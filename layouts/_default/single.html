@@ -20,9 +20,13 @@
 	    {{ end}}
 	    </nav>
     {{ end }}
+<div class="content">
+      {{.Content }}
+</div>
+{{else}}
+<div class="content">
     {{.Content }}
-  {{else}}
-    {{.Content }}
+</div>
   {{end}}
 </section>
 {{end}}
