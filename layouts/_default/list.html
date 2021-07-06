@@ -13,7 +13,7 @@
               {{if eq .Section "post"}}
                 <well class="well">
                     <h3><a class="link" href="{{.Permalink}}">{{.Title}}</a></h3>
-                    <h5>{{ .PublishDate.Format "January 2, 2006" }}</h5>
+                    <h4>{{ .PublishDate.Format "January 2, 2006" }} | Reading Time: {{.ReadingTime}} min </h4>
                     <span class="tags">
                         {{range .Params.Tags }}
                         <h5><a class="tag" href='{{ "tags/" | absURL }}{{.}}'>{{.}}</a></h5>
