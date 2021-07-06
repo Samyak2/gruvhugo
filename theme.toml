@@ -2,6 +2,7 @@ name = "Gruvhugo"
 license = "GPL-3.0"
 licenselink = "https://gitlab.com/avron/gruvhugo/-/blob/master/LICENSE"
 description = "A minmal theme based on the Gruvbox color scheme."
+demosite = "https://avron.gitlab.io/gruvhugo/"
 homepage = "https://avron.gitlab.io/gruvhugo/"
 tags = ["landing page", "gruvbox", "blog", "mobile", "light", "minimal", "modern", "customizable", "dark mode"]
 features = ["fast", "dark mode", "Responsive", "Clean", "Simple"]
