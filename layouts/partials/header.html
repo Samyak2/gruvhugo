@@ -32,6 +32,7 @@
       themeSetter('light')
       document.addEventListener("DOMContentLoaded", blockSwitcher)
   }
+ else localStorage.setItem('theme', 'dark')
 
   document.getElementById('chk').addEventListener('change',styleSwapper);
 
