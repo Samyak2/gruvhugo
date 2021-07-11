@@ -1,32 +1,32 @@
 {{define "main"}}
 <section class="intro">
-  {{if eq .Section "post"}}
+    {{if eq .Section "post"}}
     <h1 class="post-title"><a class="go-back" href="{{ "post/" | absLangURL}}">
-	<i class="far fa-caret-square-left"></i></a> {{.Title}}</h1>
+	      <i class="far fa-caret-square-left"></i></a> {{.Title}}</h1>
     <p class="post-dets">Published on: {{ .PublishDate.Format "January 2, 2006"}}
- | Reading Time: {{.ReadingTime}} min | Last Modified : {{ .Page.Lastmod.Format "January 2, 2006" }}
-      <br>
+        | Reading Time: {{.ReadingTime}} min | Last Modified : {{ .Page.Lastmod.Format "January 2, 2006" }}
+        <br>
     </p>
     <span class="tags">
-    {{range .Params.Tags }}
+        {{range .Params.Tags }}
         <h5><a class="tag" href='{{ "tags/" | absURL }}{{.}}'>{{.}}</a></h5>
-    {{end}}
+        {{end}}
     </span>
-      {{ if .IsTranslated }}
-      <p>Also available in: </p>
-	    <nav class="LangNav">
-	    {{ range .Translations }}
-      <a class="link" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-	    {{ end}}
-	    </nav>
+    {{ if .IsTranslated }}
+    <p>Also available in: </p>
+	  <nav class="LangNav">
+	      {{ range .Translations }}
+        <a class="link" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+	      {{ end}}
+	  </nav>
     {{ end }}
-<div class="content">
-      {{.Content }}
-</div>
-{{else}}
-<div class="content">
-    {{.Content }}
-</div>
-  {{end}}
+    <div class="content">
+        {{.Content }}
+    </div>
+    {{else}}
+    <div>
+        {{.Content }}
+    </div>
+    {{end}}
 </section>
 {{end}}
