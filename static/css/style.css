@@ -1,5 +1,4 @@
 /* Styling */
-/* @import url('http://fonts.cdnfonts.com/css/quicksand'); */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 html {
@@ -185,6 +184,8 @@ blockquote {
 }
 .nav a {
     background: #076678;
+    background: linear-gradient(90deg, rgba(7,102,120,1) 0%, rgba(10,143,168,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#076678",endColorstr="#0a8fa8",GradientType=1);
     padding: 10px;
     color: #fbf1c7;
     text-decoration: none;
@@ -197,6 +198,7 @@ blockquote {
     color: #076678;
     text-decoration: none;
     border: 2px solid #076678;
+    animation : blueToWhite 0.4s linear;
 }
 .go-back {
     color: inherit;
@@ -240,7 +242,6 @@ blockquote.light{
 }
 .social a {
     text-decoration: none;
-    color: auto;
     margin: 0;
     color: #076678;
 }
@@ -303,11 +304,11 @@ code {
 }
 @media screen and (max-width: 1024px) {
     .main {
-	width: 80%;
+	    width: 80%;
     }
     #footer p,
     .intro-quote {
-	width: 90%;
+	    width: 90%;
     }
 }
 .back-transition{
@@ -316,7 +317,7 @@ code {
 .footnote-definition {
     display: flex;
     padding: 5px 0px;
- }
+}
 .social{
     width: 100%;
 }
@@ -326,4 +327,15 @@ code {
 }
 ul li p {
     margin: 5px;
+}
+@keyframes blueToWhite {
+    0% {
+        background: #076678;
+        background: linear-gradient(90deg, #076678 0%, rgba(10,143,168,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#076678",endColorstr="#0a8fa8",GradientType=1);
+    }
+    100% {
+        background: white;
+        color: #076678;
+    }
 }
