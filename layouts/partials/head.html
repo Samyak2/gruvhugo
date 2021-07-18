@@ -28,11 +28,12 @@
     <meta name="author" content='{{ .Site.Params.main.name }}'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{hugo.Generator}}
-    {{ $style := resources.Get "/sass/main.scss" | toCSS | minify | fingerprint }}
-    {{ if $style }}
+    {{ $sass := resources.Get "/sass/main.scss" }}
+    {{ if $sass }}
+    {{ $style := $sass | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" type="text/css" media="screen" >
     {{ end }}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
     <!-- RSS -->
     {{ with .OutputFormats.Get "rss" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
