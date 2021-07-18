@@ -2,9 +2,10 @@ variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
 pages:
-  image: registry.gitlab.com/pages/hugo/hugo_extended:latest
+  image: "alpine:latest"
   script:
     - cat /etc/*release
+    - apk add hugo
     - hugo new site test && cd test
     - mkdir themes/gruvhugo 
     - cp -r ../archetypes themes/gruvhugo
