@@ -4,7 +4,7 @@ variables:
 pages:
   image: registry.gitlab.com/pages/hugo/hugo_extended:latest
   script:
-    - uname -a
+    - cat /etc/*release
     - hugo new site test && cd test
     - mkdir themes/gruvhugo 
     - cp -r ../archetypes themes/gruvhugo
