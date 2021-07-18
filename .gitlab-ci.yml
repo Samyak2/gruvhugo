@@ -4,8 +4,10 @@ variables:
 pages:
   image: "alpine:latest"
   script:
+    - rm -rf public
     - cat /etc/*release
     - apk add hugo
+    - hugo env
     - hugo new site test && cd test
     - mkdir themes/gruvhugo 
     - cp -r ../archetypes themes/gruvhugo
