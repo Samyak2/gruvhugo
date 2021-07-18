@@ -26,6 +26,7 @@ Adding theme as a sub-module is by the most efficient way to do things in my opi
 
 ``` sh
 $ git submodule add https://gitlab.com/avron/gruvhugo.git
+$ git checkout v1.0.0
 ```
 ## Configuration
 Like almost every other Hugo the config file is placed in 
