@@ -15,6 +15,7 @@ pages:
     - cp -r ../archetypes themes/gruvhugo
     - cp -r ../exampleSite themes/gruvhugo 
     - cp -r ../layouts themes/gruvhugo
+    - cp -r ../assets themes/gruvhugo
     - cp ../LICENSE.md themes/gruvhugo
     - cp ../README.md themes/gruvhugo
     - cp -r ../static themes/gruvhugo
