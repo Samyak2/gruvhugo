@@ -5,6 +5,7 @@ html {
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -14,26 +15,31 @@ body {
     box-sizing: border-box;
     line-height: 1.4;
 }
+
 body.light {
     background: white;
     color: #454545;
 }
+
 .verbatim{
     font-family: monospace;
     padding: 3px 5px;
     border-radius: 3px;
 }
+
 .title {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+
 .name {
     width: 80%;
     flex: 1;
     text-align: left;
     width: 80%;
 }
+
 .link, sup a {
     border-right: 0px;
     border-top: 0px;
@@ -43,10 +49,12 @@ body.light {
     text-decoration: none;
     color: #076678;
 }
+
 .content {
     margin-top: 30px;
     border-top: 2px #808080 solid;
 }
+
 .line {
     margin: 0;
     background: #076678;
@@ -57,41 +65,52 @@ body.light {
     top: 0;
     z-index: 1000;
 }
-p a,
-li a {
-    border-right: 0px;
-    border-top: 0px;
-    border-left: 0px;
-    border-bottom: 2px solid;
-    border-style: dotted;
-    text-decoration: none;
-    color: #076678;
+
+p, li {
+    a{
+        border-right: 0px;
+        border-top: 0px;
+        border-left: 0px;
+        border-bottom: 2px solid;
+        border-style: dotted;
+        text-decoration: none;
+        color: #076678;
+    }
 }
+
 .color-scheme {
     font-size: 15px;
 }
+
 .checkbox {
     opacity: 0;
     position: absolute;
 }
+
 .post-title {
     margin-bottom: 5px;
 }
+
 .post-dets {
     margin: 0px 0px 5px 0px;
 }
+
 .tags {
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     boder-bottom: 2px dotted;
 }
-.tags a {
-    margin-right: 5px;
+
+.tags {
+    a {
+        margin-right: 5px;
+    }
+    h5 {
+        margin: 6px 5px 6px 0px;
+    }
 }
-.tags h5 {
-    margin: 6px 5px 6px 0px;
-}
+
 .tag {
     background: #e25555;
     color: white;
@@ -100,9 +119,11 @@ li a {
     text-decoration: none;
     margin: 0px;
 }
+
 .well h5 {
     margin: 5px 0px;
 }
+
 .label {
     background-color: #282828;
     border-radius: 50px;
@@ -115,18 +136,17 @@ li a {
     width: 40px;
     transform: scale(1.5);
     margin-top: 10px;
-}
-
-.label .ball {
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    height: 17px;
-    width: 17px;
-    transform: translateX(0px);
-    transition: transform 0.2s linear;
+    .ball {
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        height: 17px;
+        width: 17px;
+        transform: translateX(0px);
+        transition: transform 0.2s linear;
+    }
 }
 
 .checkbox:checked + .label .ball {
@@ -147,13 +167,16 @@ li a {
     width: 50%;
     margin: auto;
 }
+
 .intro {
     display: flex;
     flex-direction: column;
 }
+
 .intro p {
     text-align: justify;
 }
+
 .intro-quote {
     font-family: serif;
     list-style: none;
@@ -161,6 +184,7 @@ li a {
     text-align: center;
     width: 400px;
 }
+
 .image {
     width: 200px;
     border-radius: 200px;
@@ -170,40 +194,46 @@ li a {
 html.contrast body {
     color: #050505;
 }
+
 small {
     font-size: calc(0.5em + 0.33vw);
 }
+
 ul li img {
     height: 1em;
 }
+
 blockquote {
     margin-left: 0;
 }
+
 .nav {
     margin: 20px auto;
+    a {
+        background: #076678;
+        background: linear-gradient(90deg, rgba(7,102,120,1) 0%, rgba(10,143,168,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#076678",endColorstr="#0a8fa8",GradientType=1);
+        padding: 10px;
+        color: #fbf1c7;
+        text-decoration: none;
+        border-radius: 3px;
+        margin: 5px;
+    }
+    a:hover {
+        background: #fff;
+        padding: 8px;
+        color: #076678;
+        text-decoration: none;
+        border: 2px solid #076678;
+        animation : blueToWhite 0.4s linear;
+    }
 }
-.nav a {
-    background: #076678;
-    background: linear-gradient(90deg, rgba(7,102,120,1) 0%, rgba(10,143,168,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#076678",endColorstr="#0a8fa8",GradientType=1);
-    padding: 10px;
-    color: #fbf1c7;
-    text-decoration: none;
-    border-radius: 3px;
-    margin: 5px;
-}
-.nav a:hover {
-    background: #fff;
-    padding: 8px;
-    color: #076678;
-    text-decoration: none;
-    border: 2px solid #076678;
-    animation : blueToWhite 0.4s linear;
-}
+
 .go-back {
     color: inherit;
     text-decoration: none;
 }
+
 blockquote {
     background: #282828;
     color: #fbf1c7;
@@ -211,7 +241,14 @@ blockquote {
     margin: 1.5em 20px;
     padding: 0.5em 10px;
     quotes: "\201C""\201D""\2018""\2019";
+
+    p {
+        display: inline;
+        font-style: italic;
+        font-size: calc(0.8em + 0.33vw);
+    }
 }
+
 blockquote:before {
     color: #ccc;
     /* content: open-quote; */
@@ -220,34 +257,33 @@ blockquote:before {
     margin-right: 0.25em;
     vertical-align: -0.4em;
 }
-blockquote p {
-    display: inline;
-    font-style: italic;
-    font-size: calc(0.8em + 0.33vw);
-}
-blockquote ul,
-ul {
+
+blockquote ul, ul {
     padding-left: 20px;
 }
+
 blockquote.light{
     background: lightgrey;
     color: #454545;
 }
+
 .social {
     display: flex;
     flex-wrap: wrap;
     margin: 20px 0px 0px 0px;
     justify-content: space-between;
     width: 80%;
+    a {
+        text-decoration: none;
+        margin: 0;
+        color: #076678;
+    }
 }
-.social a {
-    text-decoration: none;
-    margin: 0;
-    color: #076678;
-}
+
 .social-link {
     font-size: 30px;
 }
+
 #footer {
     display: flex;
     flex-direction: column;
@@ -260,36 +296,35 @@ blockquote.light{
     border-bottom: 0px;
     margin: 20px auto;
     width: 100%;
-}
-#footer p {
-    width: 90%;
-    margin: 10px auto;
-}
-.copyleft b {
-    display: inline-block;
-    transform: rotate(180deg);
-}
-#footer strong {
-    width: 90%;
-}
-#footer .copyleft {
-    margin: 10px 0px;
-    padding: 0;
-    font-size: calc(0.5em + 0.33vw);
-    list-style: none;
+    p {
+        width: 90%;
+        margin: 10px auto;
+    }
+    strong {
+        width: 90%;
+    }
+    .copyleft {
+        margin: 10px 0px;
+        padding: 0;
+        font-size: calc(0.5em + 0.33vw);
+        list-style: none;
+        b {
+            display: inline-block;
+            transform: rotate(180deg);
+        }
+        li {
+            display: inline-block;
+            margin: 0 0 0 0.45em;
+            padding: 0 0 0 0.85em;
+            border-left: solid 1px rgba(255, 255, 255, 0.5);
+            line-height: 1;
+        }
+        li:first-child {
+            border-left: 0;
+        }
+    }
 }
 
-#footer .copyleft li {
-    display: inline-block;
-    margin: 0 0 0 0.45em;
-    padding: 0 0 0 0.85em;
-    border-left: solid 1px rgba(255, 255, 255, 0.5);
-    line-height: 1;
-}
-
-#footer .copyleft li:first-child {
-    border-left: 0;
-}
 pre {
     padding: 10px;
     background-color: #2c2c2c;
@@ -298,10 +333,12 @@ pre {
     font-size: calc(0.7em + 0.33vw);
     overflow-x: auto;
 }
+
 code {
     background: #2c2c2c;
     color: #fbf1c7;
 }
+
 @media screen and (max-width: 1024px) {
     .main {
 	    width: 80%;
@@ -311,23 +348,29 @@ code {
 	    width: 90%;
     }
 }
+
 .back-transition{
     transition: background 0.2s linear;
 }
+
 .footnote-definition {
     display: flex;
     padding: 5px 0px;
 }
+
 .social{
     width: 100%;
 }
+
 .footnote-body, .footnote-body p{
     margin: 0;
     padding: 0 10px;
 }
+
 ul li p {
     margin: 5px;
 }
+
 @keyframes blueToWhite {
     0% {
         background: #076678;
