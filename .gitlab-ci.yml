@@ -2,12 +2,12 @@ variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
 pages:
-  image: "debian:unstable"
+  image: "debian:stable"
   script:
     - rm -rf public
     - cat /etc/*release
     - apt-get update && apt-get install -y wget
-    - wget https://github.com/gohugoio/hugo/releases/download/v0.85.0/hugo_extended_0.85.0_Linux-64bit.deb
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.86.0/hugo_extended_0.86.0_Linux-64bit.deb
     - dpkg -i *.deb
     - hugo env
     - hugo new site test && cd test
