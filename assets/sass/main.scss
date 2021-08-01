@@ -44,7 +44,7 @@ body.light {
 }
 
 .content {
-    margin-top: 30px;
+    margin-top: 10px;
     border-top: 2px #808080 solid;
 }
 
@@ -81,21 +81,19 @@ p, li {
 }
 
 .post-title {
-    margin-bottom: 5px;
+    margin: 5px;
 }
 
 .post-dets {
     margin: 0px 0px 5px 0px;
 }
 
+
 .tags {
-    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     boder-bottom: 2px dotted;
-}
-
-.tags {
+    align-items: center;
     a {
         margin-right: 5px;
     }
@@ -113,7 +111,11 @@ p, li {
     margin: 0px;
 }
 
-.well h5 {
+.post-item {
+    margin: 10px 0;
+}
+
+.well h5 , .well h4, .well h3, .well p{
     margin: 5px 0px;
 }
 

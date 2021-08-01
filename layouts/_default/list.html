@@ -9,7 +9,7 @@
           {{end}}
         {{else}}
           {{ range .Pages}}
-            <div>
+            <div class="post-item">
               {{if eq .Section "post"}}
                 <well class="well">
                     <h3><a class="link" href="{{.Permalink}}">{{.Title}}</a></h3>

@@ -1,16 +1,19 @@
 {{define "main"}}
 <section class="intro">
     {{if eq .Section "post"}}
+    <div style="display: flex; align-items: center">
     <h1 class="post-title"><a class="go-back" href="{{ "post/" | absLangURL}}">
 	      <i class="far fa-caret-square-left"></i></a> {{.Title}}</h1>
+
+    <span class="tags" style="margin: 0 10px ">
+        {{range .Params.Tags }}
+        <h5><a class="tag" href='{{ "tags/" | absURL }}{{.}}'>{{.}}</a></h5>
+        {{end}}
+    </div>
     <p class="post-dets">Published on: {{ .PublishDate.Format "January 2, 2006"}}
         | Reading Time: {{.ReadingTime}} min | Last Modified : {{ .Page.Lastmod.Format "January 2, 2006" }}
         <br>
     </p>
-    <span class="tags">
-        {{range .Params.Tags }}
-        <h5><a class="tag" href='{{ "tags/" | absURL }}{{.}}'>{{.}}</a></h5>
-        {{end}}
     </span>
     {{ if .IsTranslated }}
     <p>Also available in: </p>
