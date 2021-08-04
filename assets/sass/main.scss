@@ -237,8 +237,8 @@ blockquote {
 }
 
 blockquote {
-    background: #282828;
-    color: #fbf1c7;
+    background: lightgrey;
+    color: #454545;
     border-left: 5px solid #076678; /*#ccc;*/
     margin: 1.5em 20px;
     padding: 0.5em 10px;
@@ -264,9 +264,9 @@ blockquote ul, ul {
     padding-left: 20px;
 }
 
-blockquote.light{
-    background: lightgrey;
-    color: #454545;
+blockquote.dark{
+    background: #282828;
+    color: #fbf1c7;
 }
 
 .social {
