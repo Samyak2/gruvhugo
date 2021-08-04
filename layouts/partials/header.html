@@ -14,13 +14,13 @@
 </div>
 <script>
   const themeSetter = (theme) => {
-      document.body.classList.toggle('light')
+      document.body.classList.toggle('dark')
       localStorage.setItem('theme', theme)
       blockSwitcher()
   }
 
   const blockSwitcher = () => [...document.getElementsByTagName("BLOCKQUOTE")]
-	.forEach(b => b.classList.toggle('light'))
+	.forEach(b => b.classList.toggle('dark'))
 
   const styleSwapper = () => {
       document.body.classList.add('back-transition')
@@ -28,11 +28,11 @@
       else if (localStorage.getItem('theme') === 'light') themeSetter('dark')
   }
 
-  if (localStorage.getItem('theme') === 'light'){
-      themeSetter('light')
+  if (localStorage.getItem('theme') === 'dark'){
+      themeSetter('dark')
       document.addEventListener("DOMContentLoaded", blockSwitcher)
   }
- else localStorage.setItem('theme', 'dark')
+ else localStorage.setItem('theme', 'light')
 
   document.getElementById('chk').addEventListener('change',styleSwapper);
 
