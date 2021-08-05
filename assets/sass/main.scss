@@ -226,7 +226,7 @@ blockquote {
         background: linear-gradient(90deg, rgba(7,102,120,1) 0%, rgba(10,143,168,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#076678",endColorstr="#0a8fa8",GradientType=1);
         padding: 10px;
-        color: #fbf1c7;
+        color: white;
         text-decoration: none;
         border-radius: 3px;
         margin: 5px;
@@ -276,7 +276,7 @@ blockquote ul, ul {
 
 blockquote.dark{
     background: #282828;
-    color: #fbf1c7;
+    color: white;
 }
 
 .social {
@@ -348,7 +348,7 @@ pre {
 
 code {
     background: #2c2c2c;
-    color: #fbf1c7;
+    color: white;
 }
 
 @media screen and (max-width: 1024px) {
@@ -388,7 +388,7 @@ ul li p {
         background: #076678;
         background: linear-gradient(90deg, #076678 0%, rgba(10,143,168,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#076678",endColorstr="#0a8fa8",GradientType=1);
-        color: #fbf1c7;
+        color: white;
     }
     100% {
         background: white;
