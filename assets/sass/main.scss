@@ -92,9 +92,14 @@ p, li {
     opacity: 0;
     position: absolute;
 }
-
+.post-header{
+    display: flex;
+    align-items: center;
+}
 .post-title {
-    margin: 5px;
+    margin: 5px 0px;
+    overflow-wrap: break-word;
+    hyphens: manual;
     font-family: sans-serif;
 }
 
@@ -108,9 +113,6 @@ p, li {
     flex-wrap: wrap;
     boder-bottom: 2px dotted;
     align-items: center;
-    a {
-        margin-right: 5px;
-    }
     h5 {
         margin: 6px 5px 6px 0px;
     }
@@ -354,6 +356,12 @@ code {
 @media screen and (max-width: 1024px) {
     .main {
 	    width: 90%;
+    }
+    .tags, .post-title {
+        margin: 0;
+    }
+    .post-header{
+        flex-wrap: wrap;
     }
     #footer p,
     .intro-quote {
