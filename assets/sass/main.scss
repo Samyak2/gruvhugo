@@ -10,11 +10,20 @@ body {
     font-size: calc(1em + 0.22vw);
     box-sizing: border-box;
     line-height: 1.4;
+    ::selection {
+        color: white;
+        background: black;
+    }
 }
 
 body.dark {
     background: #1d2021;
-    color: #fbf1c7;
+    color: white;
+
+    ::selection {
+        color: black;
+        background: white;
+    }
 }
 
 .verbatim{
