@@ -14,6 +14,7 @@ body {
         color: white;
         background: black;
     }
+    min-height: 80vh;
 }
 
 body.dark {
@@ -124,7 +125,7 @@ p, li {
     padding: 5px;
     border-radius: 5px;
     text-decoration: none;
-    margin: 0px;
+    margin-right: 3px;
 }
 
 .post-item {
