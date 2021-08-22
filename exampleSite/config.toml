@@ -33,7 +33,7 @@ metaDataFormat= "yaml"
   copyright = "© 2021 Jane Doe.  <a href=\"https://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
   name = "jane_doe"
   img = "img/author.jpg"
-  # Thanks to Christina @ wocintechchat.com for this photo.
+  img_title = "Thanks to Christina @ wocintechchat.com for this photo."
   icon = "img/logo.png"
   quote = "A nice quote that you like that describes the beautiful person you are."
   description= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. Quis risus sed vulputate odio ut. Sed turpis tincidunt id aliquet risus feugiat in ante metus. Bibendum at varius vel pharetra vel turpis. Semper viverra nam libero justo laoreet sit amet cursus. Mauris a diam maecenas sed enim ut sem."
