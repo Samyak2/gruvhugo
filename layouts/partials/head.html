@@ -31,6 +31,16 @@
     {{ $style := resources.Get "/sass/main.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" type="text/css" media="screen" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+
+    {{ range .Site.Params.style.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+    {{- end }}
+
+    {{ range .Site.Params.style.custom_scss -}}
+    {{ $scss_file := resources.Get . | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $scss_file.Permalink }}">
+    {{- end }}
+
     <!-- RSS -->
     {{ with .OutputFormats.Get "rss" -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
