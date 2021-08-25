@@ -1,29 +1,34 @@
 /* Styling */
+$primary-accent-color: #076678;
+$secondary-accent-color: #0a8fa8;
+$light-color: white;
+$dark-color: black;
+
 html{
     font-family:'Times New Roman', 'Times', 'Noto Serif', serif;
 }
 body {
     margin: 0;
     padding: 0;
-    background: white;
+    background: $light-color;
     color: #454545;
     font-size: calc(1em + 0.22vw);
     box-sizing: border-box;
     line-height: 1.4;
     ::selection {
-        color: white;
-        background: black;
+        color: $light-color;
+        background: $dark-color;
     }
     min-height: 80vh;
 }
 
 body.dark {
     background: #1d2021;
-    color: white;
+    color: $light-color;
 
     ::selection {
-        color: black;
-        background: white;
+        color: $dark-color;
+        background: $light-color;
     }
 }
 
@@ -54,7 +59,7 @@ body.dark {
     border-bottom: 2px solid;
     border-style: dotted;
     text-decoration: none;
-    color: #076678;
+    color: $primary-accent-color;
 }
 
 .content {
@@ -64,7 +69,7 @@ body.dark {
 
 .line {
     margin: 0;
-    background: #076678;
+    background: $primary-accent-color;
     height: 5px;
     border-radius: 4px;
     width: 0%;
@@ -81,7 +86,7 @@ p, li {
         border-bottom: 2px solid;
         border-style: dotted;
         text-decoration: none;
-        color: #076678;
+        color: $primary-accent-color;
     }
 }
 
@@ -121,7 +126,7 @@ p, li {
 
 .tag {
     background: #e25555;
-    color: white;
+    color: $light-color;
     padding: 5px;
     border-radius: 5px;
     text-decoration: none;
@@ -225,11 +230,11 @@ blockquote {
 .nav {
     margin: 20px auto;
     a {
-        background: #076678;
-        background: linear-gradient(90deg, rgba(7,102,120,1) 0%, rgba(10,143,168,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#076678",endColorstr="#0a8fa8",GradientType=1);
+        background: $primary-accent-color;
+        background: linear-gradient(90deg, $primary-accent-color 0%, $secondary-accent-color 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$primary-accent-color",endColorstr="#0a8fa8",GradientType=1);
         padding: 10px;
-        color: white;
+        color: $light-color;
         text-decoration: none;
         border-radius: 3px;
         margin: 5px;
@@ -237,9 +242,9 @@ blockquote {
     a:hover {
         background: #fff;
         padding: 8px;
-        color: #076678;
+        color: $primary-accent-color;
         text-decoration: none;
-        border: 2px solid #076678;
+        border: 2px solid $primary-accent-color;
         animation : blueToWhite 0.4s linear;
     }
 }
@@ -252,7 +257,7 @@ blockquote {
 blockquote {
     background: lightgrey;
     color: #454545;
-    border-left: 5px solid #076678; /*#ccc;*/
+    border-left: 5px solid $primary-accent-color; /*#ccc;*/
     margin: 1.5em 20px;
     padding: 0.5em 10px;
     quotes: "\201C""\201D""\2018""\2019";
@@ -279,7 +284,7 @@ blockquote ul, ul {
 
 blockquote.dark{
     background: #282828;
-    color: white;
+    color: $light-color;
 }
 
 .social {
@@ -291,7 +296,7 @@ blockquote.dark{
     a {
         text-decoration: none;
         margin: 0;
-        color: #076678;
+        color: $primary-accent-color;
     }
 }
 
@@ -351,7 +356,7 @@ pre {
 
 code {
     background: #2c2c2c;
-    color: white;
+    color: $light-color;
 }
 
 @media screen and (max-width: 1024px) {
@@ -394,13 +399,13 @@ ul li p {
 
 @keyframes blueToWhite {
     0% {
-        background: #076678;
-        background: linear-gradient(90deg, #076678 0%, rgba(10,143,168,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#076678",endColorstr="#0a8fa8",GradientType=1);
-        color: white;
+        background: $primary-accent-color;
+        background: linear-gradient(90deg, $primary-accent-color 0%, $secondary-accent-color 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$primary-accent-color",endColorstr="#0a8fa8",GradientType=1);
+        color: $light-color;
     }
     100% {
-        background: white;
-        color: #076678;
+        background: $light-color;
+        color: $primary-accent-color;
     }
 }
