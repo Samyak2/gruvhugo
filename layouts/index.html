@@ -1,7 +1,7 @@
 {{define "main"}}
 <div class="intro" style="align-items: center">
   {{if .Site.Params.main.enabled }}
-  <img class="image" src='{{ .Site.Params.main.img | absURL }}' title="Icon by freepik rom www.flaticon.com" width="200px"/>
+  <img class="image" src='{{ .Site.Params.main.img | absURL }}' title="{{ .Site.Params.main.img_title }}" width="200px"/>
   <ul>
     <li class="intro-quote">{{ .Site.Params.main.quote }}</li>
   </ul>
@@ -10,3 +10,4 @@
 </div>
 {{ partial "menu.html" . }}
 {{end}}
+
