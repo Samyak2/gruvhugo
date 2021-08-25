@@ -64,6 +64,12 @@ metaDataFormat= "yaml"
     name = "linkedin"
     url  = "https://www.linkedin.com/"
 
+[params.style]
+  # add path to custom CSS files here
+  custom_css = []
+  # add path to custom SCSS files here
+  custom_scss = []
+
 [menu]
   [[menu.main]]
     identifier = "about"

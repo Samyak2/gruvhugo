@@ -6,7 +6,7 @@
     <li class="intro-quote">{{ .Site.Params.main.quote }}</li>
   </ul>
   {{end}}
-  <p>{{ .Site.Params.main.description }}</p>
+  <p>{{ .Site.Params.main.description | safeHTML }}</p>
 </div>
 {{ partial "menu.html" . }}
 {{end}}
