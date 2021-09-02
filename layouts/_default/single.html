@@ -5,6 +5,7 @@
     <h2 class="post-title"><a class="go-back" href="{{ "post/" | absLangURL}}">
 	      <i class="far fa-caret-square-left"></i></a> {{.Title}}</h2>
     </div>
+    <p>By <a href="{{ .Params.AuthorUrl }}">{{ .Params.Author }}</a></p>
     <p class="post-dets">Published on: {{ .PublishDate.Format "January 2, 2006"}}
         | Reading Time: {{.ReadingTime}} min | Last Modified : {{ .Page.Lastmod.Format "January 2, 2006" }}
         <br>
