@@ -41,7 +41,7 @@ metaDataFormat= "yaml"
 
 [params.style]
   # add path to custom CSS files here
-  custom_css = ["css/custom.css"]
+  custom_css = ["css/style.css"]
 
  # Social icons
   [[params.social]]
