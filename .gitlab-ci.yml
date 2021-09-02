@@ -23,8 +23,10 @@ pages:
     - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
     - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml 
     - cp -r themes/gruvhugo/static/ .
+    - ls -lh
     - hugo
     - mv public ../
+    - ls -lh
   artifacts:
     paths:
       - public
