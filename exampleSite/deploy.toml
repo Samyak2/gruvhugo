@@ -39,6 +39,10 @@ metaDataFormat= "yaml"
   description= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. Quis risus sed vulputate odio ut. Sed turpis tincidunt id aliquet risus feugiat in ante metus. Bibendum at varius vel pharetra vel turpis. Semper viverra nam libero justo laoreet sit amet cursus. Mauris a diam maecenas sed enim ut sem."
   licenseUrl = "https://gitlab.com/avron/gruvhugo/-/raw/master/LICENSE.md"
 
+[params.style]
+  # add path to custom CSS files here
+  custom_css = ["css/custom.css"]
+
  # Social icons
   [[params.social]]
     name = "gitlab"
