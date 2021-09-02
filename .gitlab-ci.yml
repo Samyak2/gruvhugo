@@ -23,10 +23,9 @@ pages:
     - rm -rf ../content && cp -r themes/gruvhugo/exampleSite/content/ . 
     - rm config.toml && cp themes/gruvhugo/exampleSite/deploy.toml ./config.toml 
     - cp -r themes/gruvhugo/static/ .
-    - ls -lh
+    - cp -r themes/gruvhugo/exampleSite/static/css/ static/.
     - hugo
     - mv public ../
-    - ls -lh static
   artifacts:
     paths:
       - public
