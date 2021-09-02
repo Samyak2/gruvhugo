@@ -1,8 +1,6 @@
 /* Styling */
-$primary-accent-color: #076678;
-$secondary-accent-color: #0a8fa8;
-$light-color: white;
-$dark-color: black;
+
+@import 'variables';
 
 html{
     font-family:'Times New Roman', 'Times', 'Noto Serif', serif;
