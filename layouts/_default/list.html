@@ -13,7 +13,16 @@
               {{if eq .Section "post"}}
                 <well class="well">
                   <h3><a class="link" href="{{.Permalink}}">{{.Title}}</a>
-                    by <a class="link" href="{{ .Params.AuthorUrl }}">{{ .Params.Author }}</a></h3>
+                    {{ if (isset .Params "author") }}
+                    <p>by
+                        {{ if (isset .Params "author_url") }}
+                            <a href="{{ .Params.AuthorUrl }}">{{ .Params.Author }}</a>
+                        {{ else }}
+                            {{ .Params.Author }}
+                        {{ end }}
+                    </p>
+                    {{ end }}
+                    </h3>
                     <h4>{{ .PublishDate.Format "January 2, 2006" }} | Reading Time: {{.ReadingTime}} min </h4>
                     <span class="tags">
                         {{range .Params.Tags }}
