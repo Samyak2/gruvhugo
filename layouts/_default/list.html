@@ -13,7 +13,9 @@
               {{if eq .Section "post"}}
                 <well class="well">
                   <h3><a class="link" href="{{.Permalink}}">{{.Title}}</a>
+                    {{ if .Params.Author }}
                     by <a class="link" href="{{ .Params.AuthorUrl }}">{{ .Params.Author }}</a></h3>
+                  {{ end }}
                     <h4>{{ .PublishDate.Format "January 2, 2006" }} | Reading Time: {{.ReadingTime}} min </h4>
                     <span class="tags">
                         {{range .Params.Tags }}
