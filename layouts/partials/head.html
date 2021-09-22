@@ -5,15 +5,18 @@
         <title>{{.Site.Title}}</title>
         <meta name="description" content="{{ .Site.Params.main.description  }}" >
         <meta property="og:title" content="{{ .Site.Title }}" />
-        <meta property="og:description" content="{{ .Site.Params.main.description }}"/>
+        <meta property="og:description" content="{{
+				.Site.Params.main.description | plainify }}"/>
         <meta property="og:image" content="{{ .Site.Params.main.img | absURL }}" />
+				<meta name="keywords" content="{{ $.Site.Params.main.Keywords }}"/>
     {{else}}
         <title>{{.Title}} | {{.Site.Title}}</title>
         <meta name="description" content="{{.Title}}">
         <meta property="og:site_name" content="{{ .Title }}" />
         <meta property="og:title" content="{{ .Site.Title }}" />
-        <meta property="og:description" content="{{ .Summary }}"/>
+        <meta property="og:description" content="{{ .Summary | plainify}}"/>
         <meta property="og:image" content="{{ .Site.Params.main.img | absURL }}" />
+				<meta name="keywords" content="{{ with .Params.Keywords }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}"/>
     {{end}}
     {{ if .Site.Params.main.enableKatex }}
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
