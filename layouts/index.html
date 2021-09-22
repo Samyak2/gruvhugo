@@ -1,7 +1,9 @@
 {{define "main"}}
 <div class="intro" style="align-items: center">
   {{if .Site.Params.main.enabled }}
-  <img class="image" src='{{ .Site.Params.main.img | absURL }}' title="{{ .Site.Params.main.img_title }}" width="200px"/>
+  <img class="image" src='{{ .Site.Params.main.img | absURL }}' 
+	title="{{	.Site.Params.main.img_title }}" width="200px" 
+	alt="Author's picture or avatar or logo"/>
   <ul>
     <li class="intro-quote">{{ .Site.Params.main.quote }}</li>
   </ul>
