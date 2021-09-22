@@ -364,7 +364,10 @@ code {
 }
 
 @media screen and (max-width: 1024px) {
-    .main {
+    html {
+		font-size: 1em; 
+		}
+				.main {
 	    width: 90%;
     }
     .tags, .post-title {
