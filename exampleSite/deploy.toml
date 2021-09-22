@@ -34,7 +34,7 @@ metaDataFormat= "yaml"
   headerTitle = "Jane Doe"
   copyright = "© 2021 Jane Doe.  <a href=\"https://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
 	keywords = "Gruvhugo, Hugo, Theme, Blog, Personal Website, Community page, free software, fediverse"
-  img = "img/author.jpg"
+  img = "img/author.webp"
   # Thanks to Christina @ wocintechchat.com for this photo.
   icon = "img/logo.png"
   quote = "A nice quote that you like that describes the beautiful person you are."
