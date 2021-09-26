@@ -27,17 +27,23 @@ metaDataFormat= "yaml"
 
 [params.main]
   enabled = true
+  lang = "en"
   enableKatex = true
   metaKeywords = "fast, hugo, theme, minimal, gruvbox"
   name = "jane_doe"
   headerTitle = "Jane Doe"
   copyright = "© 2021 Jane Doe.  <a href=\"https://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
-  img = "img/author.jpg"
+	keywords = "Gruvhugo, Hugo, Theme, Blog, Personal Website, Community page, free software, fediverse"
+  img = "img/author.webp"
   # Thanks to Christina @ wocintechchat.com for this photo.
   icon = "img/logo.png"
   quote = "A nice quote that you like that describes the beautiful person you are."
   description= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. Quis risus sed vulputate odio ut. Sed turpis tincidunt id aliquet risus feugiat in ante metus. Bibendum at varius vel pharetra vel turpis. Semper viverra nam libero justo laoreet sit amet cursus. Mauris a diam maecenas sed enim ut sem."
   licenseUrl = "https://gitlab.com/avron/gruvhugo/-/raw/master/LICENSE.md"
+
+[params.style]
+  # add path to custom CSS files here
+  custom_css = ["css/style.css"]
 
  # Social icons
   [[params.social]]

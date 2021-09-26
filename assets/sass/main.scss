@@ -1,8 +1,6 @@
 /* Styling */
-$primary-accent-color: #076678;
-$secondary-accent-color: #0a8fa8;
-$light-color: white;
-$dark-color: black;
+
+@import 'variables';
 
 html{
     font-family:'Times New Roman', 'Times', 'Noto Serif', serif;
@@ -167,6 +165,10 @@ p, li {
         transform: translateX(0px);
         transition: transform 0.2s linear;
     }
+		svg {
+						height: 15px;
+						color: #f39c12;
+		}
 }
 
 .checkbox:checked + .label .ball {
@@ -252,6 +254,8 @@ blockquote {
 .go-back {
     color: inherit;
     text-decoration: none;
+		display:flex;
+		margin: auto 10px auto 0px;
 }
 
 blockquote {
@@ -314,7 +318,7 @@ blockquote.dark{
     border-top: 2px solid;
     border-left: 0px;
     border-bottom: 0px;
-    margin: 20px auto;
+    margin: 20px auto auto auto;
     width: 100%;
     p {
         width: 90%;
@@ -360,7 +364,10 @@ code {
 }
 
 @media screen and (max-width: 1024px) {
-    .main {
+    html {
+		font-size: 1em; 
+		}
+				.main {
 	    width: 90%;
     }
     .tags, .post-title {
