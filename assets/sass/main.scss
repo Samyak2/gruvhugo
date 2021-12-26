@@ -160,13 +160,14 @@ p, li {
         position: absolute;
         top: 2px;
         left: 2px;
-        height: 17px;
-        width: 17px;
+        height: 16px;
+        width: 16px;
         transform: translateX(0px);
         transition: transform 0.2s linear;
     }
 		svg {
-						height: 15px;
+						height: 12px;
+						width: 12px;
 						color: #f39c12;
 		}
 }
