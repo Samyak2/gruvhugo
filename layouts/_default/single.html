@@ -8,9 +8,12 @@
 {{ if .Params.Author }}
 <p>By <a href="{{ .Params.AuthorUrl }}">{{ .Params.Author }}</a></p>
 {{ end }}
-<p class="post-dets">Published on: {{ .PublishDate.Format "January 2, 2006"}}
-  | Reading Time: {{.ReadingTime}} min | Last Modified: {{ .Page.Lastmod.Format "January 2, 2006" }}
-  <br>
+<p class="post-dets">
+    <span class="post-det-entry">Published on: {{ .PublishDate.Format "January 2, 2006"}}</span>
+    <span class="post-det-divider"></span>
+    <span class="post-det-entry">Reading Time: {{.ReadingTime}} min</span>
+    <span class="post-det-divider"></span>
+    <span class="post-det-entry">Last Modified: {{ .Page.Lastmod.Format "January 2, 2006" }}</span>
 </p>
 <span class="tags">
   {{range .Params.Tags }}

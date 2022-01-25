@@ -109,6 +109,44 @@ p, li {
 
 .post-dets {
     margin: 0px 0px 5px 0px;
+    display: flex;
+
+    .post-det-entry {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .post-det-entry:first-child {
+        text-align: left;
+    }
+
+    .post-det-entry:last-child {
+        text-align: right;
+    }
+
+    .post-det-divider {
+        flex-grow: 0;
+        border-left: 1px solid $light-color;
+        border-top: 1px solid $light-color;
+        margin: 0rem 1rem;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .post-dets {
+        flex-direction: column;
+
+        .post-det-entry {
+            text-align: left;
+        }
+
+        .post-det-entry:last-child {
+            text-align: left;
+        }
+
+        .post-det-divider {
+            margin: 0.5rem 0rem;
+        }
+    }
 }
 
 
