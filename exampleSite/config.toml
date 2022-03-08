@@ -70,6 +70,11 @@ metaDataFormat= "yaml"
   # add path to custom SCSS files here
   custom_scss = []
 
+[params.analytics]
+  # add goat counter endpoint link here
+  # leave empty to disable
+  goat_counter_link = ""
+
 [menu]
   [[menu.main]]
     identifier = "about"
