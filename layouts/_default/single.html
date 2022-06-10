@@ -8,14 +8,13 @@
 {{ if .Params.Author }}
 <p>By <a href="{{ .Params.AuthorUrl }}">{{ .Params.Author }}</a></p>
 {{ end }}
-<p class="post-dets">
-    <span class="post-det-entry">Published on: {{ .PublishDate.Format "January 2, 2006"}}</span>
-    <span class="post-det-divider"></span>
-    <span class="post-det-entry">Reading Time: {{.ReadingTime}} min</span>
-    <span class="post-det-divider"></span>
-    <span class="post-det-entry">Last Modified: {{ .Page.Lastmod.Format "January 2, 2006" }}</span>
-</p>
+<div class="post-dets">
+    <div class="post-det-entry">{{.ReadingTime}} min</div>
+    <div class="post-det-entry">{{ .PublishDate.Format "January 2, 2006"}} (updated {{ .Page.Lastmod.Format "January 2, 2006" }})</div>
+    <div class="post-det-entry"></div>
+</div>
 <span class="tags">
+  Tagged:&nbsp;
   {{range .Params.Tags }}
   <h5><a class="tag" href='{{ "tags/" | absURL }}{{.}}'>{{.}}</a></h5>
   {{end}}
