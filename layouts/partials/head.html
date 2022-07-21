@@ -42,11 +42,22 @@
     {{ $style := resources.Get "/sass/main.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" type="text/css" media="screen" >
 
+    <!-- custom CSS files specified in config -->
     {{ range .Site.Params.style.custom_css -}}
     <link rel="stylesheet" href="{{ . | absURL }}">
     {{- end }}
 
     {{ range .Site.Params.style.custom_scss -}}
+    {{ $scss_file := resources.Get . | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $scss_file.Permalink }}">
+    {{- end }}
+
+    <!-- page-specific CSS files -->
+    {{ range .Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+    {{- end }}
+
+    {{ range .Params.custom_scss -}}
     {{ $scss_file := resources.Get . | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $scss_file.Permalink }}">
     {{- end }}
