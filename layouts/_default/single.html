@@ -10,7 +10,12 @@
 {{ end }}
 <div class="post-dets">
     <div class="post-det-entry">{{.ReadingTime}} min</div>
-    <div class="post-det-entry">{{ .PublishDate.Format "January 2, 2006"}} (updated {{ .Page.Lastmod.Format "January 2, 2006" }})</div>
+    <div class="post-det-entry">
+        {{ .PublishDate.Format "January 2, 2006"}}
+        {{if ne (.PublishDate.Format "January 2, 2006") (.Page.Lastmod.Format "January 2, 2006")}}
+            (updated {{ .Page.Lastmod.Format "January 2, 2006" }})
+        {{ end }}
+    </div>
     <div class="post-det-entry"></div>
 </div>
 <span class="tags">
