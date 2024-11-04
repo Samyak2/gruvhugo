@@ -12,9 +12,9 @@
     {{else}}
         <title>{{.Title}} | {{.Site.Title}}</title>
         <meta name="description" content="{{.Title}}">
-        <meta property="og:site_name" content="{{ .Title }}" />
-        <meta property="og:title" content="{{ .Site.Title }}" />
-        <meta property="og:description" content="{{ .Summary | plainify}}"/>
+        <meta property="og:site_name" content="{{ .Site.Title }}" />
+        <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}" />
+        <meta property="og:description" content="{{ .Summary | plainify }}"/>
         <meta property="og:image" content="{{ .Site.Params.main.img | absURL }}" />
 				<meta name="keywords" content="{{ with .Params.Keywords }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}"/>
     {{end}}
