@@ -84,7 +84,7 @@ p, li {
         border-bottom: 2px solid;
         border-style: dotted;
         text-decoration: none;
-        color: $primary-accent-color;
+        color: var(--link-color);
     }
 }
 
