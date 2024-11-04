@@ -418,3 +418,11 @@ ul li p {
     border: none;
     font-size: 1.3rem;
 }
+
+.katex-display {
+    overflow-y: auto;
+    overflow-x: visible;
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
