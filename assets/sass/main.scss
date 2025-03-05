@@ -355,8 +355,12 @@ pre {
 }
 
 code {
-    background: #2c2c2c;
+    background: #efefef;
     color: $light-color;
+}
+
+code.dark {
+    background: #2c2c2c;
 }
 
 @media screen and (max-width: 1024px) {
