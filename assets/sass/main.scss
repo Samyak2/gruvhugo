@@ -357,9 +357,10 @@ pre {
 code {
     background: #efefef;
     color: $light-color;
+    transition: background 0.2s linear;
 }
 
-code.dark {
+body.dark code {
     background: #2c2c2c;
 }
 
