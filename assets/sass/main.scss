@@ -195,6 +195,12 @@ body.dark .tag {
     text-align: justify;
 }
 
+@media screen and (max-width: 480px) {
+  .intro p {
+      text-align: initial;
+  }
+}
+
 .intro-quote {
     font-family: serif;
     list-style: none;
