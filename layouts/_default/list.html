@@ -14,7 +14,7 @@
         {{else}}
           {{ range .Pages}}
             <div class="post-item">
-              {{if eq .Section "post"}}
+              {{if or (eq .Section "post") (eq .Section "talks")}}
                 <well class="well">
                   <h3><a class="link" href="{{.Permalink}}">{{.Title}}</a>
                     {{ if .Params.Author }}
